@@ -7,8 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<h1>Copycat</h1>
-<%= yield %>
-
+	<nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+		<div class="container">
+			<a href="#" class="navbar-brand">Copycat</a>
+			<ul class="nav navbar-nav">
+				<li><%= link_to 'All Statuses', statuses_path %></li>
+			</ul>
+		</div>	
+	</nav>	
+	<div class ="container">
+		<p class="notice"><%= notice %></p>
+		<p class="alert"><%= alert %></p>
+		<%= yield %>
+	</div>
 </body>
 </html>
